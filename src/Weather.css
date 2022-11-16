@@ -1,0 +1,36 @@
+.Weather h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 3px;
+  margin: 20px 0 0 0;
+  color: rgb(84, 133, 174);
+}
+
+.Weather .color-btn {
+  background-color: rgb(84, 133, 174);
+  color: white;
+}
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+}
+.Weather img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+.Weather .temperature {
+  font-weight: bold;
+  color: rgb(84, 133, 174);
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: 400;
+}
