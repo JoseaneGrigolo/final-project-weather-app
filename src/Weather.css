@@ -20,6 +20,7 @@
   background-color: rgb(84, 133, 174);
   color: white;
 }
+
 .Weather ul {
   margin: 0;
   padding: 0;
@@ -31,11 +32,13 @@
   line-height: 19px;
   list-style: none;
 }
+
 .Weather img {
   margin-right: 10px;
   height: 64px;
   width: 64px;
 }
+
 .Weather .temperature {
   font-weight: bold;
   color: rgb(84, 133, 174);

@@ -2,6 +2,7 @@
   margin: 30px auto;
   max-width: 600px;
 }
+
 body {
   background-color: rgb(84, 133, 174);
 }
@@ -13,7 +14,9 @@ body {
   padding: 16px;
   border-radius: 10px;
   color: rgb(135, 135, 135);
+  box-shadow: 8px 8px 3px 1px rgba(135, 135, 135, 0.2);
 }
+
 .App .logo {
   width: 60%;
 }
