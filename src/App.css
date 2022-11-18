@@ -17,8 +17,9 @@ body {
 .App .logo {
   width: 60%;
 }
+
 .App footer {
-  font-size: 12px;
+  font-size: 10px;
   margin-top: 10px;
   color: rgb(135, 135, 135);
 }

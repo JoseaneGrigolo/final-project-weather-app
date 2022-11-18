@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="mt-2 mb-4">
+        <header className="mt-2 mb-2">
           <img src={logo} alt="Logo Joseane's Weather" className="logo" />
         </header>
-        <Weather defaultCity="Porto Alegre" />
+        <Weather />
         <hr />
         <footer>
           This project was coded by{" "}

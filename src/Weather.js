@@ -2,11 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import { ThreeDots } from "react-loader-spinner";
+
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const apiKey = "f0e305386at1e3ea45oc41a38550b0b4";
 
   function handleResponse(response) {
     setWeatherData({
@@ -24,7 +27,6 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "f0e305386at1e3ea45oc41a38550b0b4";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -38,12 +40,40 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function handlePosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <hr />
+        <form onSubmit={handleSubmit} className="mb-3">
+          <input
+            type="submit"
+            value="Paris"
+            className="btn cities"
+            onClick={handleCityChange}
+          />
+          <input
+            type="submit"
+            value="Tokyo"
+            className="btn cities"
+            onClick={handleCityChange}
+          />
+          <input
+            type="submit"
+            value="Las Vegas"
+            className="btn cities"
+            onClick={handleCityChange}
+          />
+        </form>
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-9 pe-1">
               <input
                 type="search"
                 placeholder="Enter a city.."
@@ -52,7 +82,7 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3  ps-0 pe-1">
               <input
                 type="submit"
                 value="Search"
@@ -66,7 +96,20 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
-    return "Loading...";
+    navigator.geolocation.getCurrentPosition(handlePosition);
+    return (
+      <div className="weather-spinner">
+        <ThreeDots
+          height="80"
+          width="80"
+          radius="30"
+          color="#5485AE"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+      </div>
+    );
   }
 }

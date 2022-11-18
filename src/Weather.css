@@ -1,3 +1,12 @@
+.Weather .cities {
+  padding: 0 15px 0 0;
+  color: rgb(84, 133, 174);
+}
+
+.Weather .cities:hover {
+  opacity: 0.8;
+}
+
 .Weather h1 {
   font-size: 24px;
   font-weight: 400;
@@ -33,4 +42,9 @@
   font-size: 60px;
   line-height: 64px;
   font-weight: 400;
+}
+
+.weather-spinner {
+  display: flex;
+  justify-content: center;
 }
