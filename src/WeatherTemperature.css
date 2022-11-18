@@ -1,3 +1,13 @@
+:root {
+  --primary-color: rgb(84, 133, 174);
+}
+
 .unit a {
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
+}
+
+@media (max-width: 425px) {
+  .unit {
+    font-size: 12px;
+  }
 }

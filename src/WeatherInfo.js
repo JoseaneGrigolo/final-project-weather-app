@@ -13,12 +13,12 @@ export default function WeatherInfo(props) {
       </ul>
 
       <div className="row mt-3">
-        <div className="col-6">
+        <div className="col-6 p-0">
           <div className="clearfix">
             <img
               src={props.data.icon_url}
               alt={props.data.icon}
-              className="float-start"
+              className="float-start img-weather"
             />
             <WeatherTemperature celsius={props.data.temperature} />
           </div>

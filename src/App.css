@@ -1,19 +1,24 @@
+:root {
+  --primary-color: rgb(84, 133, 174);
+  --secondary-color: rgb(135, 135, 135);
+}
+
 .App {
   margin: 30px auto;
   max-width: 600px;
 }
 
 body {
-  background-color: rgb(84, 133, 174);
+  background-color: var(--primary-color);
 }
 
 .App .container {
   background-color: white;
-  border: 1px solid #dadde1;
+  border: 1px solid var(--secondary-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 16px;
   border-radius: 10px;
-  color: rgb(135, 135, 135);
+  color: var(--secondary-color);
   box-shadow: 8px 8px 3px 1px rgba(135, 135, 135, 0.2);
 }
 
@@ -24,11 +29,11 @@ body {
 .App footer {
   font-size: 10px;
   margin-top: 10px;
-  color: rgb(135, 135, 135);
+  color: var(--secondary-color);
 }
 
 .App footer a {
   text-decoration: none;
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
   letter-spacing: 1px;
 }

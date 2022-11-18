@@ -1,9 +1,13 @@
+:root {
+  --primary-color: rgb(84, 133, 174);
+}
+
 .WeatherForecast {
   text-align: center;
 }
 
 .WeatherForecast-day {
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
   font-weight: 600;
 }
 
@@ -20,4 +24,26 @@
   width: 36px;
   height: 36px;
   margin: 0px;
+}
+
+@media (max-width: 380px) {
+  .WeatherForecast .WeatherForecast-img {
+    width: 24px;
+    height: 24px;
+  }
+  .WeatherForecast-day {
+    font-size: 12px;
+    padding: 0;
+  }
+  .WeatherForecast-max {
+    font-size: 12px;
+  }
+  .WeatherForecast-min {
+    font-size: 10px;
+  }
+}
+@media (max-width: 490px) {
+  .WeatherForecast .col {
+    padding: 0;
+  }
 }

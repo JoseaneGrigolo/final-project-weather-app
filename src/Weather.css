@@ -1,6 +1,9 @@
+:root {
+  --primary-color: rgb(84, 133, 174);
+}
 .Weather .cities {
   padding: 0 15px 0 0;
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
 }
 
 .Weather .cities:hover {
@@ -13,11 +16,11 @@
   line-height: 29px;
   letter-spacing: 3px;
   margin: 20px 0 0 0;
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
 }
 
 .Weather .color-btn {
-  background-color: rgb(84, 133, 174);
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -41,7 +44,7 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(84, 133, 174);
+  color: var(--primary-color);
   font-size: 60px;
   line-height: 64px;
   font-weight: 400;
@@ -50,4 +53,42 @@
 .weather-spinner {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 332px) {
+  .Weather .img-weather {
+    height: 34px;
+    width: 34px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .Weather h1 {
+    font-size: 20px;
+  }
+  .Weather .cities {
+    font-size: 14px;
+  }
+  .Weather li {
+    font-size: 12px;
+  }
+  .Weather .temperature {
+    font-size: 40px;
+  }
+  .Weather img {
+    height: 46px;
+    width: 46px;
+  }
+  .Weather .color-btn,
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 410px) {
+  .Weather .temperature {
+    font-size: 45px;
+    line-height: 54px;
+  }
 }
