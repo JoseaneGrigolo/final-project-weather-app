@@ -69,7 +69,7 @@ export default function Weather(props) {
           <input
             type="submit"
             value="Las Vegas"
-            title="Las vegas Weather"
+            title="Las Vegas Weather"
             className="btn cities"
             onClick={handleCityChange}
           />

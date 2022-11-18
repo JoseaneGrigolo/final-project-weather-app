@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgb(84, 133, 174);
 }
+
 .Weather .cities {
   padding: 0 15px 0 0;
   color: var(--primary-color);
