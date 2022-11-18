@@ -56,17 +56,20 @@ export default function Weather(props) {
             type="submit"
             value="Paris"
             className="btn cities"
+            title="Paris Weather"
             onClick={handleCityChange}
           />
           <input
             type="submit"
             value="Tokyo"
+            title="Tokyo Weather"
             className="btn cities"
             onClick={handleCityChange}
           />
           <input
             type="submit"
             value="Las Vegas"
+            title="Las vegas Weather"
             className="btn cities"
             onClick={handleCityChange}
           />
@@ -76,6 +79,7 @@ export default function Weather(props) {
             <div className="col-9 pe-1">
               <input
                 type="search"
+                title="Enter a city.."
                 placeholder="Enter a city.."
                 className="form-control"
                 autoFocus="on"
@@ -86,6 +90,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
+                title="Search"
                 className="btn color-btn w-100"
               />
             </div>

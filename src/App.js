@@ -10,6 +10,7 @@ function App() {
           <a
             href="https://musical-starburst-1b9dd7.netlify.app/"
             rel="noreferrer"
+            title="Joseane's Weather App"
           >
             <img src={logo} alt="Logo Joseane's Weather" className="logo" />
           </a>
@@ -23,6 +24,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
             className="fw-semibold"
+            title="Joseane's Linkedin"
           >
             Joseane Grigolo{" "}
           </a>
@@ -32,6 +34,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
             className="fw-semibold"
+            title="Joseane's GitHub"
           >
             GitHub{" "}
           </a>
@@ -41,6 +44,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
             className="fw-semibold"
+            title="Joseane's Netlify"
           >
             {" "}
             Netlify
