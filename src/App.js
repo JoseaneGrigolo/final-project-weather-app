@@ -7,7 +7,12 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="mt-2 mb-2">
-          <img src={logo} alt="Logo Joseane's Weather" className="logo" />
+          <a
+            href="https://musical-starburst-1b9dd7.netlify.app/"
+            rel="noreferrer"
+          >
+            <img src={logo} alt="Logo Joseane's Weather" className="logo" />
+          </a>
         </header>
         <Weather />
         <hr />
